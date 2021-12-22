@@ -4,6 +4,8 @@
 </form>
 
 <?php
+ini_set('display_errors', 0 );
+error_reporting(0);
 
 $link = $_POST['capt'];
 $token = parse_url($link)['query'];
