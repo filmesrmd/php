@@ -5,6 +5,6 @@ $sep2 = explode('</span></div></span',$sep1[4]);
 
 $versao = $sep2[0];
 
-$apiv = json_decode(file_get_contents('https://version.common.freefiremobile.com/live/ver.php?version=$versao&lang=pt-br&device=android&channel'));
+$apiv = json_decode(file_get_contents('https://version.common.freefiremobile.com/live/ver.php?version='.$versao.'&lang=pt-br&device=android&channel'));
 echo $apiv->remote_version;
 ?>
