@@ -21,13 +21,6 @@ $depoix = $cappt[2];
 $z = $depoix+1;
 if (file_get_contents('https://freefiremobile-a.akamaihd.net/live/ABHotUpdates/android_max/2.'.$cappt[1].'.'.$z.'/versioninfo')){$veri  = "2.".$cappt[1].".".$z;}else{$veri = "false";}
 //
-for($hi = 22; $hi<27; $hi++){
-	$k = json_decode(file_get_contents('https://version.advance.freefiremobile.com/trial/ver.php?version=66.'.$hi.'.0&device=android'));
-	$myv .= $k->remote_version."<br>";
-	$bv = explode('.',$k->remote_version);
-	$ault = $bv[2]+1;
-if (file_get_contents('https://freefiremobile-a.akamaihd.net/advance/ABHotUpdates/android/66.'.$bv[1].'.'.$ault.'/versioninfo')){$ll  = "66.".$bv[1].".".$ault;}else{$ll = "false";}
-}
 
 $criajson = array(
 	"ff_normal" => array(
@@ -37,10 +30,6 @@ $criajson = array(
 	"ff_max" => array(
     "version" => $apiv2->remote_version,
     "checa_mini" => $veri,
-	),
-	"ff_adv" => array(
-    "version" => $myv,
-    "checa_mini" => $ll,
 	),
 );
 
