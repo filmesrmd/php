@@ -26,7 +26,7 @@ $api_css = file_get_contents('https://'.$nome_evento.'/api/css?'.$token.$regiao)
 $convert = explode(")",$api_css);
 for($a = 0; $a<count($convert)-1;$a++){
 	$outro = explode("(",$convert[$a]);
-	echo '<img src = '.$outro[1].'/>';
+	echo '<img src = '.$outro[1].'>';
 	echo "<br>";
 }
 ?>
