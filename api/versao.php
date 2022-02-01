@@ -19,6 +19,8 @@ $apiv2 = json_decode(file_get_contents('https://version.common.freefiremobile.co
 $cappt = explode('.',$apiv2->remote_version);
 $depoix = $cappt[2];
 $z = $depoix+1;
+$za = $depoix+2;
+if (file_get_contents('https://freefiremobile-a.akamaihd.net/live/ABHotUpdates/android_max/2.'.$cappt[1].'.'.$za.'/versioninfo')){$veri  = "2.".$cappt[1].".".$z;}else{$veri = "false";}
 if (file_get_contents('https://freefiremobile-a.akamaihd.net/live/ABHotUpdates/android_max/2.'.$cappt[1].'.'.$z.'/versioninfo')){$veri  = "2.".$cappt[1].".".$z;}else{$veri = "false";}
 //
 
